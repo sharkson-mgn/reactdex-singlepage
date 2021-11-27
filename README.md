@@ -17,6 +17,7 @@ This is <u>single-page</u> app edition, used...
 
 This code (mechanism, js script, etc.) also <a href="https://en.wikipedia.org/wiki/MIT_License">MIT Licensed</a>.
 
+I'm try to learning React so if You can hint, say or show me about React and related, I'm waiting on mgn@jix.im.
 
 # Getting Started with Create React App
 
