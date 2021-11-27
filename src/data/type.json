@@ -1,0 +1,74 @@
+[
+    {
+        "id": "POKEMON_TYPE_BUG",
+        "name": "Bug"
+    },
+    {
+        "id": "POKEMON_TYPE_DARK",
+        "name": "Dark"
+    },
+    {
+        "id": "POKEMON_TYPE_DRAGON",
+        "name": "Dragon"
+    },
+    {
+        "id": "POKEMON_TYPE_ELECTRIC",
+        "name": "Electric"
+    },
+    {
+        "id": "POKEMON_TYPE_FAIRY",
+        "name": "Fairy"
+    },
+    {
+        "id": "POKEMON_TYPE_FIGHTING",
+        "name": "Fighting"
+    },
+    {
+        "id": "POKEMON_TYPE_FIRE",
+        "name": "Fire"
+    },
+    {
+        "id": "POKEMON_TYPE_FLYING",
+        "name": "Flying"
+    },
+    {
+        "id": "POKEMON_TYPE_GHOST",
+        "name": "Ghost"
+    },
+    {
+        "id": "POKEMON_TYPE_GRASS",
+        "name": "Grass"
+    },
+    {
+        "id": "POKEMON_TYPE_GROUND",
+        "name": "Ground"
+    },
+    {
+        "id": "POKEMON_TYPE_ICE",
+        "name": "Ice"
+    },
+    {
+        "id": "POKEMON_TYPE_NORMAL",
+        "name": "Normal"
+    },
+    {
+        "id": "POKEMON_TYPE_POISON",
+        "name": "Poison"
+    },
+    {
+        "id": "POKEMON_TYPE_PSYCHIC",
+        "name": "Psychic"
+    },
+    {
+        "id": "POKEMON_TYPE_ROCK",
+        "name": "Rock"
+    },
+    {
+        "id": "POKEMON_TYPE_STEEL",
+        "name": "Steel"
+    },
+    {
+        "id": "POKEMON_TYPE_WATER",
+        "name": "Water"
+    }
+]
