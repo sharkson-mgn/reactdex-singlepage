@@ -58,9 +58,9 @@ class App extends React.Component {
         state = null; break;
       case 'random':
         window.location.hash = 'home';
-        state: null; break;
+        state = null; break;
       default:
-        state: hash;
+        state = hash;
     }
 
     this.setState({
