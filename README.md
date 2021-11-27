@@ -1,4 +1,4 @@
-[![njsscan sarif](https://github.com/maganiczny/reactdex-singlepage/actions/workflows/njsscan-analysis.yml/badge.svg)](https://github.com/maganiczny/reactdex-singlepage/actions/workflows/njsscan-analysis.yml) [![Node.js CI](https://github.com/maganiczny/reactdex-singlepage/actions/workflows/node.js.yml/badge.svg)](https://github.com/maganiczny/reactdex-singlepage/actions/workflows/node.js.yml)
+[![njsscan sarif](https://github.com/maganiczny/reactdex-singlepage/actions/workflows/njsscan-analysis.yml/badge.svg)](https://github.com/maganiczny/reactdex-singlepage/actions/workflows/njsscan-analysis.yml) [![Node.js CI](https://github.com/maganiczny/reactdex-singlepage/actions/workflows/node.js.yml/badge.svg)](https://github.com/maganiczny/reactdex-singlepage/actions/workflows/node.js.yml) ![License](https://img.shields.io/github/license/dyarleniber/react-workflow-gh-actions)
 
 # ReactDex
 
