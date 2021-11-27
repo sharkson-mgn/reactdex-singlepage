@@ -8,10 +8,7 @@ class LatestView extends React.Component {
 
   render() {
     const names = new pokemonAPI().getPokemonNames();
-
-    const crypto = require("crypto");
-    let randomPok = crypto.getRandomValues(names);
-    //let randomPok = names[Math.floor(crypto.randomInt() * names.length)];
+    let randomPok = names[Math.floor(Math.random() * names.length)];
     randomPok = new pokemonAPI(randomPok);
 
     let pokImage = randomPok.id.replaceAll('_','-').toLowerCase().replace('alola','alolan');
