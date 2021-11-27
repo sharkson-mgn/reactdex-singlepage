@@ -1,3 +1,5 @@
+[![njsscan sarif](https://github.com/maganiczny/reactdex-singlepage/actions/workflows/njsscan-analysis.yml/badge.svg)](https://github.com/maganiczny/reactdex-singlepage/actions/workflows/njsscan-analysis.yml) [![Node.js CI](https://github.com/maganiczny/reactdex-singlepage/actions/workflows/node.js.yml/badge.svg)](https://github.com/maganiczny/reactdex-singlepage/actions/workflows/node.js.yml)
+
 # ReactDex
 
 Hello in ReactDex! This is simple Pokedex app using the <b>React.js</b> framework. Its simple to start! Type name or dex number in search input.
