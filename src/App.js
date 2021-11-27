@@ -49,19 +49,23 @@ class App extends React.Component {
 
     let hash = window.location.hash.slice(1);
 
-    if (hash === 'home' || hash === '') {
-      this.setState({
-        show: null
-      });
+    let state;
+
+    switch (hash) {
+      case 'home':
+        state = null; break;
+      case '':
+        state = null; break;
+      case 'random':
+        window.location.hash = 'home';
+        state: null; break;
+      default:
+        state: hash;
     }
-    else if (hash === 'random') {
-      window.location.hash = 'home';
-    }
-    else {
-      this.setState({
-        show: hash
-      });
-    }
+
+    this.setState({
+      show: state
+    });
 
     return false;
 
