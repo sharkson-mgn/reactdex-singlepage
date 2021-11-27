@@ -19,6 +19,8 @@ This code (mechanism, js script, etc.) also <a href="https://en.wikipedia.org/wi
 
 I'm try to learning React so if You can hint, say or show me about React and related, I'm waiting on mgn@jix.im.
 
+I know that this code is not very pretty, but I wanted to learning basics and understanding what it works. Maybe in future I will correct this repo.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
