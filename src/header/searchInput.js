@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import {FormControl} from 'react-bootstrap';
 
 import jQuery from 'jquery';
@@ -10,9 +10,21 @@ import 'jquery-ui/ui/widgets/autocomplete.js';
 import 'jquery-ui/themes/base/core.css';
 import 'jquery-ui/themes/base/theme.css';
 import 'jquery-ui/themes/base/menu.css';
-import 'jquery-ui/themes/base/autocomplete.css';
+import 'jquery-ui/themes/base/autocomplete.css';*/
 
-const $ = jQuery;
+const React = require('react');
+const {FormControl} = require('react-bootstrap');
+const $ = require('jquery');
+
+require('jquery-ui/ui/core.js');
+require('jquery-ui/ui/widget.js');
+require('jquery-ui/ui/widgets/autocomplete.js');
+require('jquery-ui/themes/base/core.css');
+require('jquery-ui/themes/base/theme.css');
+require('jquery-ui/themes/base/menu.css');
+require('jquery-ui/themes/base/autocomplete.css');
+
+//const $ = jQuery;
 
 //require('jquery-ui/ui/core');
 /*require('jquery-ui/ui/core');
