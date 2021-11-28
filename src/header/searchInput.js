@@ -3,9 +3,9 @@ import {FormControl} from 'react-bootstrap';
 
 import jQuery from 'jquery';
 
-import 'jquery-ui/ui/core';
-import 'jquery-ui/ui/widget';
-import 'jquery-ui/ui/widgets/autocomplete';
+import 'jquery-ui/ui/core.js';
+import 'jquery-ui/ui/widget.js';
+import 'jquery-ui/ui/widgets/autocomplete.js';
 
 import 'jquery-ui/themes/base/core.css';
 import 'jquery-ui/themes/base/theme.css';
