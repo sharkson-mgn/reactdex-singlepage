@@ -2,16 +2,22 @@ import React from 'react';
 import {FormControl} from 'react-bootstrap';
 
 import jQuery from 'jquery';
+
+import 'jquery-ui/ui/core';
+import 'jquery-ui/ui/widget';
+import 'jquery-ui/ui/widgets/autocomplete';
+
 import 'jquery-ui/themes/base/core.css';
 import 'jquery-ui/themes/base/theme.css';
 import 'jquery-ui/themes/base/menu.css';
 import 'jquery-ui/themes/base/autocomplete.css';
 
-//require('jquery-ui/ui/core');
 const $ = jQuery;
-require('jquery-ui/ui/core');
+
+//require('jquery-ui/ui/core');
+/*require('jquery-ui/ui/core');
 require('jquery-ui/ui/widget');
-require('jquery-ui/ui/widgets/autocomplete');
+require('jquery-ui/ui/widgets/autocomplete');*/
 
 const pokemonAPI = require('../pokemonAPI.js');
 
