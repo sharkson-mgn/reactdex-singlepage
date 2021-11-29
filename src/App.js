@@ -5,14 +5,22 @@ import Header from './header';
 import PokemonView from './content/Pokemon.js';
 import HomeView from './content/Home.js';
 
+/********************************
+ *
+ *     ~~ Smart Component ~~
+ *
+ *  The App Component is a simple router
+ *  to display HomeView or PokemonView.
+ *  It also supports changing the value
+ *  of location.hash in the above pages.
+ *
+ ********************************/
+
 class App extends React.Component {
 
   constructor (props) {
     super(props);
-    this.state = {
-      show: null
-    };
-
+    this.state = { show: null };
   }
 
   searchHandler(event) {
@@ -20,11 +28,19 @@ class App extends React.Component {
     event.preventDefault();
 
     let pokemonName;
+
     if (typeof event.target.elements !== 'undefined')
       pokemonName = event.target.elements.pokemonName.value;
 
     else if (typeof event.target.form !== 'undefined')
       pokemonName = event.target.form.pokemonName.value;
+
+    else
+      pokemonName = null;
+
+    if (pokemonName !== null) {
+      window.location.hash = pokemonName;
+    }
 
     this.setState({
       show: pokemonName
@@ -86,19 +102,6 @@ class App extends React.Component {
     return;
   }
 
-  renderBody() {
-    if (this.state.show === null) {
-      return <HomeView />;
-    }
-    else {
-      return <PokemonView
-        key={this.state.show}
-        pokemon={this.state.show}
-        onChangePokemonForm={this.selectPokemonFormHandler.bind(this)}
-      />;
-    }
-  }
-
   render() {
     return (
       <Container fluid>
@@ -106,7 +109,14 @@ class App extends React.Component {
           searchHandler={this.searchHandler.bind(this)}
           value={this.state.show}
         />
-        {this.renderBody()}
+        { this.state.show === null ?
+          <HomeView /> :
+          <PokemonView
+            key={this.state.show}
+            pokemon={this.state.show}
+            onChangePokemonForm={this.selectPokemonFormHandler.bind(this)}
+          />
+        }
       </Container>
     );
   }

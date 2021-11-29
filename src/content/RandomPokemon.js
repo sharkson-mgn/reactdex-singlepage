@@ -2,9 +2,9 @@ import React from 'react';
 import { Row,
   Col} from 'react-bootstrap';
 
-const pokemonAPI = require('../pokemonAPI.js');
+import pokemonAPI from '../pokemonAPI.js';
 
-class LatestView extends React.Component {
+class RandomPokemon extends React.Component {
 
   render() {
     const names = new pokemonAPI().getPokemonNames();
@@ -16,11 +16,10 @@ class LatestView extends React.Component {
 
     return <Row><Col className='col-12'>Random pokemon:</Col>
       <Col key="random" className='col-12 d-flex align-items-end'>
-        <a
-          href={'#'+randomPok.id.toLowerCase()}
-          onClick={this.props.navigationHandler}
-        >
-          <Row>
+        <Row>
+          <a
+            href={'#'+randomPok.id.toLowerCase()}
+          >
             <Col
               key="img"
               className="d-flex justify-content-center col-12"
@@ -36,18 +35,18 @@ class LatestView extends React.Component {
             >
               <span>{randomPok.name}</span>
             </Col>
-            <Col
-              key="rand"
-              className="d-flex justify-content-center col-12"
-            >
-              <a href="#random">Random</a>
-            </Col>
-          </Row>
-        </a>
+          </a>
+          <Col
+            key="rand"
+            className="d-flex justify-content-center col-12"
+          >
+            <a href="#random">Random</a>
+          </Col>
+        </Row>
       </Col>
     </Row>;
   }
 
 }
 
-export default LatestView;
+export default RandomPokemon;

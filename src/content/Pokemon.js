@@ -4,45 +4,42 @@ import { Row,
   Col,
   ProgressBar} from 'react-bootstrap';
 
-const pokemonAPI = require('../pokemonAPI.js');
+import levenshtein from 'js-levenshtein';
+import pokemonAPI from '../pokemonAPI.js';
 
 class PokemonView extends React.Component {
 
   constructor(props)
   {
     super(props);
-    //this.state = { pokemon: props.pokemon };
 
-    //let pok = new pokemonAPI(props.pokemon);
     let pok = new pokemonAPI(this.props.pokemon);
-    let hint;
+    let hint = null;
 
     if (pok.id === null)
     {
-      const levenshtein = require('js-levenshtein');
       let pokemonNames = pok.getPokemonNames();
       let toFind = this.props.pokemon.toLowerCase();
 
       let lev = [];
       for (let i in pokemonNames) {
         if (pokemonNames.hasOwnProperty(i)) {
+
           let p = pokemonNames[i].toLowerCase();
 
-          //lev[p.replaceAll(' ','_')] = levenshtein(this.props.pokemon,p);
           lev.push({
             name: p,
             lev: levenshtein(toFind,p)
           });
-          //lev.push(levenshtein(this.props.pokemon,p));
         }
       }
       lev.sort((a,b) => {
         return a.lev > b.lev;
       });
 
-      hint = lev[0];
-      hint = (hint.lev <= 3) ? hint.name : null;
-
+      if (lev[0].lev <= 3) {
+        hint = lev[0].name;
+      }
 
       pok = null;
     }
@@ -51,39 +48,51 @@ class PokemonView extends React.Component {
       pokemon: pok,
       hint: hint
     };
-    /*this.setState({
-      pokemon: pok
-    });*/
   }
 
   renderEvolutions()
   {
     let evolutions = this.state.pokemon.evolution;
 
-    if (typeof evolutions !== 'undefined' && Object.keys(evolutions).length > 0) {
-      let toReturn = [];
+    //at first check maintly if pokemon require evolution
+    if (
+          typeof evolutions !== 'undefined' &&
+          Object.keys(evolutions).length > 0
+        ) {
+
+      let toReturn = []; //in this has store elements about evo
+
       if (typeof evolutions.pastBranch !== 'undefined') {
-        toReturn.push(<div key="past">Poprzednia <a
+
+        toReturn.push( //push previous evolution if exists
+          <div key="past">previous <a
             href={'#'+evolutions.pastBranch.id.toLowerCase()}
-            className="pokemonLink"
           >{evolutions.pastBranch.name}</a>
-          </div>);
+          </div>
+        );
       }
-      if (typeof evolutions.futureBranches !== 'undefined' &&
-            Object.keys(evolutions.futureBranches).length > 0) {
+
+      if (
+            typeof evolutions.futureBranches !== 'undefined' &&
+            Object.keys(evolutions.futureBranches).length > 0
+          ) {
+
         let nextForms = evolutions.futureBranches.map((p) => {
           return <li
               key={p.name}><a
-              className={p.name.toUpperCase()}
               href={"#"+p.id.toLowerCase()}
             >{p.name}</a></li>;
         });
-        toReturn.push(<div key="future">Następne: <ul>{nextForms}</ul></div>);
+
+        toReturn.push(<div key="future">Next: <ul>{nextForms}</ul></div>);
       }
       return toReturn;
+
     }
     else {
-      return <span>Ten pokemon nie ma żadnych ewolucji.</span>;
+
+      return <span>This pokemon has no evolutins.</span>;
+
     }
   }
 
@@ -111,7 +120,7 @@ class PokemonView extends React.Component {
       </select>;
     }
     else {
-      return <span>To jedyna forma tego pokemona.</span>
+      return <span>This is only one form this pokemon.</span>
     }
   }
 
@@ -158,10 +167,10 @@ class PokemonView extends React.Component {
               </Col>
             </Row>
           <hr />
-          Ewolucje:<br />
+          Evolutions:<br />
           {this.renderEvolutions()}
           <hr />
-          Inne formy: {this.renderForms()}
+          Other forms: {this.renderForms()}
         </Col>
       </Row>;
     }

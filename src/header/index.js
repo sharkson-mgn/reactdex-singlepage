@@ -6,6 +6,12 @@ import { Container,
 
 import SearchInput from './searchInput.js';
 
+ /********************************
+  *
+  *     ~~ Dump Component ~~
+  *
+  ********************************/
+
 function Header(props) {
 
   let defaultValue = (props.value !== null) ?

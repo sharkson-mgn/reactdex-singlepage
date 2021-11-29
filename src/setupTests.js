@@ -3,3 +3,9 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+
+import $ from 'jquery';
+declare var window: any;
+declare var global: any;
+window.$ = window.jQuery = $;
+global.$ = global.jQuery = $;

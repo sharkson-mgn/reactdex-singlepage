@@ -4,7 +4,7 @@
 //const avatarCustomization = require('./data/avatar-customization.json');
 //const items = require('./data/item.json');
 
-class pokemonAPI {
+export default class pokemonAPI {
 
   pokemon = require('./data/pokemon.json');
   pokemon_second = require('./data/pokemon_2.json');
@@ -135,4 +135,4 @@ class pokemonAPI {
 
 }
 
-module.exports = pokemonAPI;
+//export default pokemonAPI;

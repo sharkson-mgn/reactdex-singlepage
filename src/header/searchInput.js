@@ -1,37 +1,16 @@
-/*import React from 'react';
+import React from 'react';
 import {FormControl} from 'react-bootstrap';
-
-import jQuery from 'jquery';
-
-import 'jquery-ui/ui/core.js';
-import 'jquery-ui/ui/widget.js';
-import 'jquery-ui/ui/widgets/autocomplete.js';
-
+import $ from 'jquery';
+import 'jquery-ui/ui/unique-id';
+import 'jquery-ui/ui/widget';
+import 'jquery-ui/ui/widgets/menu';
+import 'jquery-ui/ui/widgets/autocomplete';
 import 'jquery-ui/themes/base/core.css';
 import 'jquery-ui/themes/base/theme.css';
 import 'jquery-ui/themes/base/menu.css';
-import 'jquery-ui/themes/base/autocomplete.css';*/
+import 'jquery-ui/themes/base/autocomplete.css';
 
-const React = require('react');
-const {FormControl} = require('react-bootstrap');
-const $ = require('jquery');
-
-require('jquery-ui/ui/core.js');
-require('jquery-ui/ui/widget.js');
-require('jquery-ui/ui/widgets/autocomplete.js');
-require('jquery-ui/themes/base/core.css');
-require('jquery-ui/themes/base/theme.css');
-require('jquery-ui/themes/base/menu.css');
-require('jquery-ui/themes/base/autocomplete.css');
-
-//const $ = jQuery;
-
-//require('jquery-ui/ui/core');
-/*require('jquery-ui/ui/core');
-require('jquery-ui/ui/widget');
-require('jquery-ui/ui/widgets/autocomplete');*/
-
-const pokemonAPI = require('../pokemonAPI.js');
+import pokemonAPI from '../pokemonAPI.js';
 
 class SearchInput extends React.Component {
 
