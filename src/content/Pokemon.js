@@ -7,6 +7,8 @@ import { Row,
 import levenshtein from 'js-levenshtein';
 import pokemonAPI from '../pokemonAPI.js';
 
+import replaceAll from '../replaceAllHook';
+
 class PokemonView extends React.Component {
 
   constructor(props)
@@ -128,7 +130,7 @@ class PokemonView extends React.Component {
 
     if (this.state.pokemon !== null) {
 
-      let pokImage = this.state.pokemon.id.replaceAll('_','-').toLowerCase().replace('alola','alolan');
+      let pokImage = replaceAll(this.state.pokemon.id,'_','-').toLowerCase().replace('alola','alolan');
       pokImage = pokImage.split('-')[0];
 
       return <Row key={this.state.pokemon.dex}>

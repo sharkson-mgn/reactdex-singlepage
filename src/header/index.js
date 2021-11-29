@@ -4,6 +4,7 @@ import { Container,
   Form,
   Button } from 'react-bootstrap';
 
+import replaceAll from '../replaceAllHook';
 import SearchInput from './searchInput.js';
 
  /********************************
@@ -15,9 +16,9 @@ import SearchInput from './searchInput.js';
 function Header(props) {
 
   let defaultValue = (props.value !== null) ?
-        props.value.replaceAll('_',' ').split(' ').map((str) => {
+        replaceAll(props.value,'_',' ').split(' ').map((str) => {
           return str.charAt(0).toUpperCase() +
-          str.slice(1).replaceAll('_',' ').toLowerCase();
+          replaceAll(str.slice(1),'_',' ').toLowerCase();
         }).join(' ') :
           '' ;
 

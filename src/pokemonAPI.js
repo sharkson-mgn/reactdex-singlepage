@@ -3,6 +3,7 @@
 //const type = require('./data/type.json');
 //const avatarCustomization = require('./data/avatar-customization.json');
 //const items = require('./data/item.json');
+import replaceAll from './replaceAllHook.js';
 
 export default class pokemonAPI {
 
@@ -102,7 +103,7 @@ export default class pokemonAPI {
 
     if (isNaN(id)) {
       //by = 'name';
-      id = id.toUpperCase().replaceAll(' ','_');
+      id = replaceAll(id.toUpperCase(),' ','_');
     }
 
     if (isNaN(id) &&

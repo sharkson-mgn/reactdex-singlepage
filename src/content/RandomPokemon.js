@@ -2,6 +2,7 @@ import React from 'react';
 import { Row,
   Col} from 'react-bootstrap';
 
+import replaceAll from '../replaceAllHook.js';
 import pokemonAPI from '../pokemonAPI.js';
 
 class RandomPokemon extends React.Component {
@@ -11,7 +12,7 @@ class RandomPokemon extends React.Component {
     let randomPok = names[Math.floor(Math.random() * names.length)];
     randomPok = new pokemonAPI(randomPok);
 
-    let pokImage = randomPok.id.replaceAll('_','-').toLowerCase().replace('alola','alolan');
+    let pokImage = replaceAll(randomPok.id,'_','-').toLowerCase().replace('alola','alolan');
     pokImage = pokImage.split('-')[0];
 
     return <Row><Col className='col-12'>Random pokemon:</Col>
