@@ -1,8 +1,5 @@
 [![njsscan sarif](https://github.com/maganiczny/reactdex-singlepage/actions/workflows/njsscan-analysis.yml/badge.svg)](https://github.com/maganiczny/reactdex-singlepage/actions/workflows/njsscan-analysis.yml) [![Node.js CI](https://github.com/maganiczny/reactdex-singlepage/actions/workflows/node.js.yml/badge.svg)](https://github.com/maganiczny/reactdex-singlepage/actions/workflows/node.js.yml) ![License](https://img.shields.io/github/license/dyarleniber/react-workflow-gh-actions)
 
-# Learnig project
-I started reading the tutorial on the official ReactJS website after working hours on November 23, 2021. You can track my achievements with this project (and possibly others).
-
 # ReactDex
 
 Hello in ReactDex! This is simple Pokedex app using the <b>React.js</b> framework. Its simple to start! Type name or dex number in search input.
